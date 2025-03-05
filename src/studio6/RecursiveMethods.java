@@ -11,11 +11,14 @@ public class RecursiveMethods {
 	 * @return the sum of the first n terms of the geometric series (1/2 + 1/4 + 1/8
 	 *         ...)
 	 */
-	public static double geometricSum(int n) {
-		
-			// FIXME compute the geometric sum for the first n terms recursively
+	
+	public static double geometricSum(double n) {
+		if (n == 0) {
 			return 0;
-		
+		} else {
+			return geometricSum(n-1)+Math.pow(0.5, n);
+		}
+			// FIXME compute the geometric sum for the first n terms recursively
 	}
 
 	
@@ -29,8 +32,18 @@ public class RecursiveMethods {
 	 * @param radiusMinimumDrawingThreshold radius above which drawing should occur
 	 */
 	public static void circlesUponCircles(double xCenter, double yCenter, double radius, double radiusMinimumDrawingThreshold) {
-		
 		// FIXME complete the recursive drawing
+		if (radius < radiusMinimumDrawingThreshold) {
+			return;
+		} else {
+			circlesUponCircles(xCenter - radius, yCenter, radius/3, radiusMinimumDrawingThreshold); //left
+			circlesUponCircles(xCenter + radius, yCenter, radius/3, radiusMinimumDrawingThreshold); //right
+			circlesUponCircles(xCenter, yCenter + radius, radius/3, radiusMinimumDrawingThreshold); //top
+			circlesUponCircles(xCenter, yCenter - radius, radius/3, radiusMinimumDrawingThreshold); //bottom
+		}
+		
+		StdDraw.circle(xCenter, yCenter, radius);
+		
 	}
 	
 
