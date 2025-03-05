@@ -18,21 +18,20 @@ public class RecursiveMethods {
 		
 	}
 
+	
 	/**
-	 * This method uses recursion to compute the greatest common divisor
-	 * for the two input values
-	 * 
-	 * @param p first operand
-	 * @param q second operand
-	 * @return greatest common divisor of p and q
+	 * @param xCenter                       x-coordinate of the center of the circle
+	 *                                      at the current depth
+	 * @param yCenter                       y-coordinate of the center of the circle
+	 *                                      at the current depth
+	 * @param radius                        radius of the circle at the current
+	 *                                      depth
+	 * @param radiusMinimumDrawingThreshold radius above which drawing should occur
 	 */
-	public static int gcd(int p, int q) {
+	public static void circlesUponCircles(double xCenter, double yCenter, double radius, double radiusMinimumDrawingThreshold) {
 		
-			// FIXME compute the gcd of p and q using recursion
-			return 0;
-		
+		// FIXME complete the recursive drawing
 	}
-
 	
 
 	/**
@@ -49,18 +48,19 @@ public class RecursiveMethods {
 	}
 
 	/**
-	 * @param xCenter                       x-coordinate of the center of the circle
-	 *                                      at the current depth
-	 * @param yCenter                       y-coordinate of the center of the circle
-	 *                                      at the current depth
-	 * @param radius                        radius of the circle at the current
-	 *                                      depth
-	 * @param radiusMinimumDrawingThreshold radius above which drawing should occur
+	 * This method uses recursion to compute the greatest common divisor
+	 * for the two input values
+	 * 
+	 * @param p first operand
+	 * @param q second operand
+	 * @return greatest common divisor of p and q
 	 */
-	public static void circlesUponCircles(double xCenter, double yCenter, double radius,
-			double radiusMinimumDrawingThreshold) {
+	public static int gcd(int p, int q) {
 		
-		// FIXME
+			// FIXME compute the gcd of p and q using recursion
+			return 0;
+		
 	}
+
 
 }
